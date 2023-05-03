@@ -1,0 +1,123 @@
+.catalog {
+   width: 320px;
+   margin: 0 auto;
+}
+
+.catalog__container {
+   padding: 64px 28px 48px;
+}
+
+.catalog__title {
+   margin-top: 0;
+   margin-bottom: 64px;
+}
+
+.catalog__list {
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   gap: 24px;
+   padding-left: 0;
+   margin-top: 0;
+   margin-bottom: 0;
+   list-style-type: none;
+}
+
+.catalog__item {
+   width: 264px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+   border-radius: 40px;
+   overflow: hidden;
+   background-color: $white-color;
+   box-shadow: 0px 4px 4px rgba(88, 13, 101, 0.15);
+   &:nth-of-type(n+7) {
+      display: none;
+   }
+}
+
+.catalog__item-link-to-page {
+   text-decoration: none;
+   transition: 0.125s ease;
+   &--pic {
+      order: -1;
+   }
+   &:hover {
+      opacity: 0.75;
+   }
+   &:active {
+      opacity: 0.4;
+   }
+}
+
+.catalog__item-title {
+   margin-top: 0;
+   margin-bottom: 27px;
+}
+
+.catalog__item-pic {
+   margin-bottom: 23px;
+}
+
+.catalog__item-info {
+   display: flex;
+   flex-direction: row-reverse;
+   justify-content: space-between;
+   width: 116px;
+   margin: 0 auto 38px;
+   padding-left: 4px; //PP
+   font-size: 18px;
+   & dd {
+      margin-left: 0;
+   }
+}
+
+.catalog__item-link-button {
+   margin-left: 3px; // PP
+   margin-bottom: 54px;
+   box-shadow: none;
+}
+
+@media (min-width: $width-tablet) {
+   .catalog {
+      width: $width-tablet;
+   }
+
+   .catalog__container {
+      padding: 108px 28px 48px;
+   }
+   
+   .catalog__title {
+      font-size: $title-tablet;
+      margin-bottom: 78px;
+   }
+
+   .catalog__list {
+      gap: 52px;
+   }
+
+   .catalog__item:nth-of-type(n+7) {
+      display: flex;
+   }
+}
+
+@media (min-width: $width-desktop) {
+   .catalog {
+      width: $width-desktop;
+   }
+
+   .catalog__container {
+      padding: 109px 28px 48px;
+   }
+   
+   .catalog__title {
+      font-size: $title-desktop;
+      margin-bottom: 101px;
+   }
+
+   .catalog__list {
+      gap: 52px 24px;
+   }
+}

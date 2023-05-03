@@ -1,0 +1,214 @@
+.news {
+   width: 320px;
+   margin: 0 auto;
+   padding-bottom: 134px;
+   background:
+      url("../../img/leaves.svg") center top 16px / 228px 32px no-repeat,
+      url("../../img/leaves.svg") left 52% bottom 86px / 228px 32px no-repeat; // PP left 48px
+}
+
+.news__container {
+   padding: 112px 26px 48px;
+}
+
+.news__title {
+   margin-top: 0;
+   margin-bottom: 64px;
+}
+
+.news__list {
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   gap: 24px;
+   padding-left: 0;
+   margin-top: 0;
+   margin-bottom: 0;
+   list-style-type: none;
+}
+
+.news__item {
+   width: 268px;
+   min-height: 328px;
+   // display: flex;
+   // flex-direction: column;
+   // justify-content: space-between;
+   border-radius: 40px;
+   background-color: $white-color;
+   box-shadow: inset 0 0 0 2px $green;
+   padding: 0 20px 72px;
+   background: url("../../img/leaf.svg") center bottom 24px / 76px 32px no-repeat;
+}
+
+.news__article-container {
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+
+.news__item-title {
+   display: flex;
+   width: 100%;
+   height: 133px; //120px
+   font-size: 20px;
+   line-height: 23px;
+   text-align: center;
+   justify-content: center;
+   align-items: center;
+   margin-top: 0;
+   margin-bottom: 0;
+}
+
+.news__item-title-tablet-brake {
+   display: none;
+}
+
+.news__item-title-desktop-brake {
+   display: none;
+}
+
+.news__item-text {
+   display: inline-block;
+   font-size: 14px;
+   line-height: 16px;
+   margin-top: -13px;
+   margin-bottom: 0;
+}
+
+.news__item-text:not(:first-of-type) {
+   margin-top: 20px;
+}
+
+.news__item-time {
+   display: inline-block;
+   font-size: 14px;
+   line-height: 16px;
+   text-align: right;
+   margin: 20px 0 0;
+}
+
+@media (min-width: $width-tablet) {
+   .news {
+      width: $width-tablet;
+      margin: 0 auto;
+      padding-bottom: 175px;
+      background:
+         url("../../img/leaves.svg") left 50.5% top 52px / 296px 42px no-repeat,
+         url("../../img/leaves.svg") center bottom 71px / 296px 42px no-repeat;
+   }
+
+   .news__container {
+      padding: 174px 26px 48px;
+   }
+
+   .news__title {
+      font-size: $title-tablet;
+      margin-right: 4px; //PP
+      margin-bottom: 78px;
+   }
+
+   .news__list {
+      gap: 34px 20px;
+   }
+
+   .news__item {
+      width: 276px;
+      min-height: 389px;
+      padding: 0 36px 105px;
+      background: url("../../img/leaf.svg") center bottom 42px / 96px 40px no-repeat;
+      &:nth-of-type(3) {
+         margin-left: -10px; //PP
+      }
+   }
+
+   .news__item-title {
+      height: 164px;
+      font-size: 28px;
+      line-height: 33px;
+   }
+
+   .news__item-title-tablet-brake {
+      display: inline-block;
+   }
+
+   .news__item-title-mobile-brake {
+      display: none;
+   }
+
+   .news__item-text {
+      font-size: 16px;
+      line-height: 20px;
+      margin-top: -7px;
+      margin-bottom: 0;
+   }
+
+   .news__item-time {
+      font-size: 16px;
+      line-height: 20px;
+      margin-right: 1px; //PP
+   }
+
+   .news__item:nth-of-type(3) .news__item-time {
+      margin-right: 0; //PP
+   }
+}
+
+@media (min-width: $width-desktop) {
+   .news {
+      width: $width-desktop;
+      margin: 0 auto;
+      padding-bottom: 192px;
+      background:
+         url("../../img/leaves.svg") left 50% top 52px / 296px 42px no-repeat,
+         url("../../img/leaves.svg") center bottom 98px / 296px 42px no-repeat;
+   }
+
+   .news__container {
+      padding: 201px 26px 48px;
+   }
+
+   .news__title {
+      font-size: $title-desktop;
+      margin-right: 0; //PP
+      margin-bottom: 107px;
+   }
+
+   .news__list {
+      gap: 24px;
+   }
+
+   .news__item {
+      width: 288px;
+      min-height: 385px;
+      padding: 0 36px 107px;
+      background: url("../../img/leaf.svg") center bottom 44px / 96px 40px no-repeat;
+      &:nth-of-type(3) {
+         margin-left: 0; //PP
+      }
+   }
+
+   .news__item-title {
+      height: 160px;
+      // font-size: 28px;
+      // line-height: 33px;
+   }
+
+   // .news__item-title-june {
+   //    display: inline-block;
+   //    // letter-spacing: 1px;
+   // }
+
+   .news__item-title-brake {
+      display: none;
+   }
+
+   .news__item:nth-of-type(2) .news__item-title-tablet-brake,
+   .news__item:nth-of-type(3) .news__item-title-tablet-brake {
+      display: none;
+   }
+
+   .news__item-title-desktop-brake {
+      display: inline-block;
+   }
+}

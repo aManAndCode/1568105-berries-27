@@ -1,0 +1,245 @@
+.contacts {
+   width: 320px;
+   margin: 0 auto;
+}
+
+.contacts__container {
+   margin-bottom: 59px; //64
+}
+
+.contacts__text-container {
+   padding-left: 28px;
+   padding-right: 28px;
+   text-align: center;
+   margin: 0 auto;
+}
+
+.contacts__order-text-container {
+   padding-left: 26px;
+}
+
+.contacts__title {
+   display: inline-block;
+   margin-right: 5px;
+   margin-bottom: 64px;
+   &--span-top {
+      margin-left: -5px; //PP
+   }
+   &--span-low {
+      margin-right: -5px; //PP
+   }
+}
+
+.contacts__text {
+   margin-top: 0;
+   margin-bottom: 32px;
+}
+
+.contacts__list {
+   text-align: left;
+   font-style: normal;
+   list-style-type: none;
+   margin-top: 0;
+   margin-bottom: 0;
+   padding-bottom: 24px;
+   padding-left: 0;
+}
+
+.contacts__item {
+   margin-top: 0;
+   min-height: 32px;
+   &--address {
+      background: url("../../img/icon-leaf.svg") left -2px center / 32px 32px no-repeat;
+   }
+   &:not(:last-of-type) {
+      margin-bottom: 12px;
+   }
+}
+
+.contacts__item-text {
+   font-size: 14px;
+   line-height: 16px;
+   margin: 0;
+   padding-left: 34px;
+}
+
+.contacts__item-link {
+   display: flex;
+   align-items: center;
+   font-size: 14px;
+   font-style: normal;
+   text-decoration: none;
+   color: #000000;
+   margin-left: -2px;
+   overflow: hidden;
+   transition: 0.15s ease;
+   &:hover {
+      color: $green-hover;
+   }
+   &:active {
+      color: $green;
+   }
+}
+
+.contacts__icon {
+   margin-right: 4px;
+}
+
+.contacts__item-link-span {
+   margin-bottom: 4px;
+}
+
+.contacts__map-container {
+   overflow: hidden;
+   border-radius: 40px;
+}
+
+.contacts__iframe {
+   height: 372px;
+   width: auto;
+}
+
+.contacts__map-pic {
+   width: 100%;
+   // height: auto;
+   display: block;
+}
+
+@media (min-width: $width-tablet) {
+   .contacts {
+      width: $width-tablet;
+   }
+
+   .contacts__container {
+      padding-top: 2px;
+      margin-bottom: 95px;
+   }
+
+   .contacts__text-container {
+      width: 404px;
+   }
+
+   .contacts__title {
+      font-size: $title-tablet;
+      line-height: 54px;
+      margin-right: 5px;
+      margin-bottom: 73px;
+   }
+
+   .contacts__title-span-top {
+      margin-left: -13px; //PP
+   }
+
+   .contacts__title-span-low {
+      margin-right: -1px; //PP
+   }
+
+   .contacts__text {
+      font-size: 20px;
+      margin-top: 0;
+      margin-bottom: 22px;
+      margin-left: -8px;
+   }
+
+   .contacts__text-mobile-break {
+      display: none;
+   }
+
+   .contacts__list {
+      margin-bottom: 16px;
+   }
+
+   .contacts__item {
+      &--address {
+         background-position-y: top;
+      }
+      &:not(:last-of-type) {
+         margin-bottom: 12px;
+      }
+      &:first-of-type {
+         margin-bottom: 11px;
+      }
+   }
+
+   .contacts__item-text {
+      font-size: 16px;
+      line-height: 33px;
+   }
+   
+   .contacts__item-link {
+      font-size: 16px;
+   }
+
+   .contacts__item-link-span {
+      margin-top: 5px;
+   }
+
+   .contacts__iframe {
+      height: 372px;
+      // width: 768px;
+   }
+}
+
+@media (min-width: $width-desktop) {
+   .contacts {
+      width: $width-desktop;
+   }
+
+   .contacts__container {
+      display: flex;
+      flex-direction: row-reverse;
+      padding-left: 156px;
+      padding-right: 156px;
+      padding-top: 0;
+      margin-bottom: 80px;
+   }
+
+   .contacts__text-container {
+      padding-top: 84px;
+      padding-left: 64px;
+      padding-right: 0;
+   }
+
+   .contacts__order-text-container {
+      padding-top: 54px;
+   }
+   
+   .contacts__title {
+      width: 350px;
+      font-size: $title-desktop;
+      line-height: 58px;
+      margin-bottom: 50px;
+      margin-left: -35px;
+   }
+
+   .contacts__title--span-top {
+      margin-left: -13px;
+   }
+
+   .contacts__title--span-low {
+      margin-right: -2px;
+   }
+
+   .contacts__title-order {
+      width: 400px;
+   }
+
+   .contacts__text {
+      margin-left: 0;
+      // padding-left: 15px;
+      // margin-bottom: 32px;
+   }
+
+   .contacts__list {
+      padding-bottom: 24px;
+      padding-left: 0;
+      margin-left: 4px;
+   }
+
+   .contacts__map-container {
+      height: 100%;
+      width: 552px;
+      margin-top: 2px; //PP
+
+   }
+}

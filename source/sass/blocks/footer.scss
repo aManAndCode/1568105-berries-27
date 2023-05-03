@@ -1,0 +1,191 @@
+
+.footer {
+   background-color: $blue-gray;
+}
+
+.footer__container {
+   width: 268px;
+   display: flex;
+   justify-content: flex-end;
+   align-items: flex-start;
+   flex-wrap: wrap;
+   margin: 0 auto;
+   padding: 11px 26px 15px;
+}
+
+.footer__logo-link {
+   margin-right: auto;
+}
+
+.footer__logo-pic .icon-logo-pic {
+   width: 52px;
+   height: 52px;
+}
+
+.footer__logo-link[href] {
+   &:hover .leaves {
+      transition: 0.1s ease;
+      fill: $green-hover;
+   }
+   &:hover .word {
+      transition: 0.1s ease;
+      fill: $green-hover;
+   }
+   &:active .leaves {
+      transition: 0.1s ease;
+      fill: $green-active;
+   }
+   &:active .word {
+      transition: 0.1s ease;
+      fill: $green-active;
+   }
+}
+
+.footer__logo-word {
+   display: none;
+}
+
+.footer__socials-list {
+   display: flex;
+   list-style-type: none;
+   margin-top: 9px;
+   padding-left: 0;
+}
+
+.footer__socials-item:not(:last-of-type) {
+   margin-right: 20px;
+}
+
+.footer__socials-svg {
+   width: 32px;
+   height: 32px;
+   &:hover path {
+      transition: 0.1s ease;
+      fill: $green-hover;
+   }
+   &:hover circle {
+      transition: 0.1s ease;
+      stroke: $green-hover;
+   }
+   &:active path {
+      // transition: 0.1s ease;
+      fill: $green-active;
+   }
+   &:active circle {
+      // transition: 0.1s ease;
+      stroke: $green-active;
+   }
+}
+
+.footer__academy {
+   display: flex;
+   align-items: center;
+   margin-top: -1px; //PP
+}
+
+.footer__academy-text {
+   display: inline-block;
+   font-size: 11px;
+   margin-top: -3px;
+}
+
+.footer__academy-link {
+   margin-left: 8px;
+   color: #000000;
+   transition: 0.125s ease;
+   &:hover {
+      color: $green-hover;
+   }
+   &:active {
+      color: $green-active;
+   }
+}
+
+.footer__academy-icon {
+   width: 20px;
+   height: 24px;
+}
+
+@media (min-width: $width-tablet) {
+   .footer__container {
+      width: 716px;
+      flex-wrap: nowrap;
+      justify-content: flex-end;
+      align-items: center;
+      padding-top: 22px;
+   }
+
+   .footer__logo-link {
+      display: flex;
+      align-items: center;
+      margin-left: -5px;
+   }
+
+   .footer__logo-pic {
+      margin-right: 10px;
+   }
+
+   .footer__logo-pic .icon-logo-pic {
+      width: 58px;
+      height: 60px;
+   }
+   
+   .footer__logo-word {
+      display: inline-block;
+      margin-top: 3px; //PP
+   }
+
+   .footer__socials-list {
+      margin: 7px 0 0;
+   }
+
+   .footer__socials-item:not(:last-of-type) {
+      margin-right: 32px;
+   }
+
+   .footer__socials-svg {
+      width: 40px;
+      height: 40px;
+   }
+
+   .footer__academy {
+      margin-top: 5px; //PP
+      margin-left: 106px;
+   }
+
+   .footer__academy-text {
+      font-size: 16px;
+      margin-top: -3px; //PP
+   }
+   
+   .footer__academy-icon {
+      width: 26px;
+      height: 32px;
+   }
+}
+
+@media (min-width: $width-desktop) {
+   .footer__container {
+      width: 1122px;
+      padding: 24px 0 15px;
+      
+   }
+
+   .footer__logo-link {
+      margin-left: -2px;
+   }
+
+   .footer__logo-pic {
+      margin-right: 10px;
+   }
+
+   .footer__socials-list {
+      margin: 0;
+   }
+
+   .footer__academy {
+      margin-top: 4px; //PP
+      margin-left: 308px;
+   }
+
+}

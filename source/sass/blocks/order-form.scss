@@ -1,0 +1,630 @@
+.order-form {
+    margin: 0 auto 182px;
+}
+
+.order-form__container {
+    width: 320px;
+    min-height: 640px;
+    margin: 0 auto;
+    background:
+        url("../../img/form-welcome-bg-mobile.jpg") center top / 320px 120px no-repeat,
+        linear-gradient(to bottom, #aa506c 120px, $white-color 120px, $white-color 100%);
+    @media (min-resolution: 2dppx) {
+        background: url("../../img/form-welcome-bg-mobile@2x.jpg") center top / 320px 120px no-repeat,
+        linear-gradient(to bottom, #aa506c 120px, $white-color 120px, $white-color 100%);
+    }
+}
+
+.order-form__welcome {
+    padding-top: 184px;
+    padding-bottom: 100px;
+    background: url("../../img/leaves.svg") center bottom 26px / 228px 33px no-repeat;
+}
+
+.order-form__welcome-title {
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-bottom: 32px;
+}
+
+.order-form__text {
+    font-size: 16px;
+    line-height: 19px;
+    padding-left: 52px;
+    padding-right: 52px;
+    margin: 0;
+    text-align: center;
+}
+
+// ?form
+.order-form__form {
+    padding-top: 26px;
+    padding-left: 26px;
+    padding-right: 26px;
+    // width: 100%;
+    margin: 0 auto;
+}
+
+.order-form__fieldset {
+    margin: 0 0 31px;
+    padding: 0;
+    border: none;
+}
+
+.order-form__fieldset-delivery {
+    padding-bottom: 36px;
+}
+
+.order-form__fieldset-yours {
+    margin-bottom: 40px;
+}
+
+.order-form__title {
+    font-size: 20px;
+    color: $green;
+    padding: 0;
+    margin-bottom: 36px;
+}
+
+.order-form__title-delivery {
+    margin-bottom: 33px;
+}
+
+.order-form__list {
+    display: flex;
+    flex-direction: column;
+    gap: 32px 34px;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.order-form__list-berries {
+    height: 304px;
+}
+
+.order-form__list-supply {
+    gap: 23px;
+}
+
+.order-form__list-delivery {
+    gap: 65px;
+    line-height: 19px;
+}
+
+.order-form__list-yours {
+    height: 100%;
+    gap: 31px 34px;
+}
+
+.order-form__item {
+    height: 24px;
+}
+
+.order-form__item-yours {
+    min-height: 81px;
+}
+
+.order-form__item-yours--address {
+    min-height: 123px;
+}
+
+.order-form__item-yours--extra {
+    min-height: 107px;
+    margin-bottom: 32px;
+}
+
+.order-form__control {
+    position: relative;
+    display: block;
+}
+
+.order-form__control-mark {
+    position: absolute;
+    top: -3px;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.08s ease;
+    box-shadow: inset 0 0 0 2px $green;
+    &::before {
+        position: absolute;
+        content: "";
+        top: 11px;
+        left: 7px;
+        width: 2px;
+        height: 7px;
+        background-color: $green;
+        transform: rotate(-45deg);
+        display: none;
+    }
+    &::after {
+        position: absolute;
+        content: "";
+        top: 6px;
+        left: 13px;
+        width: 2px;
+        height: 12px;
+        background-color: $green;
+        transform: rotate(45deg);
+        display: none;
+    }
+}
+
+.order-form__control-mark-disabled {
+    box-shadow: inset 0 0 0 2px $leaf-gray;
+}
+
+.order-form__control-mark-delivery {
+    top: 17px;
+    left: 1px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 2px $green;
+    &:before {
+        top: 7px;
+        left: 7px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+    }
+    &:after {
+        background-color: #fff;
+        width: 0;
+        height: 0;
+    }
+}
+
+.order-form__control-input:checked + .order-form__control-mark::before,
+.order-form__control-input:checked + .order-form__control-mark::after {
+    display: block;
+}
+.order-form__control-input:hover + .order-form__control-mark,
+.order-form__control-input:checked:hover + .order-form__control-mark {
+    box-shadow: inset 0 0 0 2px $green-hover;
+}
+.order-form__control-input:checked:hover + .order-form__control-mark::before,
+.order-form__control-input:checked:hover + .order-form__control-mark::after {
+    background-color: $green-hover;
+}
+
+.order-form__control-label {
+    display: block;
+    padding-left: 36px;
+}
+
+.order-form__control-label-kern {
+    letter-spacing: -1.25px;
+}
+
+.order-form__label {
+    display: flex;
+    flex-direction: column;
+    & sup {
+        color: $error-color;
+    }
+}
+
+.order-form__title-yours {
+    margin-bottom: 28px;
+}
+
+.order-form__label-span {
+    margin-left: 12px;
+    margin-bottom: 3px;
+}
+
+.order-form__item-yours--extra .order-form__label-span {
+    display: inline-block;
+    font-size: 14px;
+    margin-left: 22px;
+    margin-top: -3px;
+    margin-bottom: 6px;
+}
+
+.order-form__label-input {
+    display: inline-block;
+    border: none;
+    border-radius: 20px;
+    box-shadow: inset 0 0 0 1px $green;
+    padding: 19px 13px 18px;
+    transition: 0.1s ease;
+    background-color: $white-color;
+    &:hover {
+        box-shadow: inset 0 0 0 1px $green-hover;
+    }
+    &::placeholder {
+        font-family: "Raleway", "Montserrat", sans-serif;
+        font-size: 16px;
+        color: $leaf-gray;
+    }
+    &:invalid {
+        // box-shadow: inset 0 0 0 1px $error-color;
+    }
+    &:disabled {
+        box-shadow: inset 0 0 0 1px $leaf-gray;
+    }
+}
+
+.order-form__item-yours--address .order-form__label-input,
+.order-form__item-yours--extra .order-form__label-input {
+    padding: 15px 12px 22px;
+    min-height: 51px;
+}
+
+.order-form__item-yours--extra .order-form__label-input {
+    min-height: 87px;
+}
+
+.order-form__item-yours--address .order-form__label-input,
+.order-form__item-yours--extra .order-form__label-input {
+    resize: none;
+}
+
+.order-form__button {
+    width: 264px;
+    padding-top: 17px;
+    padding-left: 0;
+    padding-bottom: 16px;
+}
+
+@media (min-width: $width-tablet) {
+    .order-form {
+        margin: 0 auto 212px;
+
+    }
+
+    .order-form__container {
+        width: 768px;
+        min-height: 640px;
+        margin: 0 auto;
+        background:
+            url("../../img/form-welcome-bg-tablet.jpg") center top / 768px 200px no-repeat,
+            linear-gradient(to bottom, #aa506c 200px, $white-color 200px, $white-color 100%);
+        @media (min-resolution: 2dppx) {
+            background: url("../../img/form-welcome-bg-tablet@2x.jpg") center top / 768px 200px no-repeat,
+            linear-gradient(to bottom, #aa506c 200px, $white-color 200px, $white-color 100%);
+        }
+    }
+
+    .order-form__welcome {
+        padding-top: 309px;
+        background: url("../../img/leaves.svg") center bottom 23px / 296px 41px no-repeat;
+    }
+
+    .order-form__welcome-title {
+        font-size: $title-desktop; //tablet
+        margin-bottom: 57px;
+    }
+
+    .order-form__welcome-title-span {
+        margin-left: -3px;
+    }
+
+    .order-form__text {
+        font-size: 18px;
+        line-height: 22px;
+        padding-left: 142px;
+        padding-right: 142px;
+    }
+
+   // ?form
+    .order-form__form {
+        padding-top: 57px;
+        padding-left: 72px; // 118
+        padding-right: 72px; // 118
+    }
+
+    .order-form__fieldset:not(:last-of-type) {
+        padding-left: 46px;
+        padding-right: 46px;
+    }
+
+    .order-form__fieldset-berries {
+        margin-bottom: 54px;
+    }
+
+    .order-form__fieldset-supply {
+        margin-bottom: 52px;
+    }
+
+    .order-form__fieldset-delivery {
+        padding-bottom: 21px;
+    }
+
+    .order-form__title {
+        font-size: 28px;
+        margin-bottom: 49px;
+    }
+
+    .order-form__title-delivery {
+        margin-bottom: 46px;
+    }
+
+    .order-form__title-yours {
+        text-align: center;
+        margin-bottom: 41px;
+    }
+
+    .order-form__list-berries {
+        height: 168px;
+        gap: 24px 20px;
+    }
+
+    .order-form__list-supply {
+        flex-direction: row;
+        gap: 24px 37px;
+    }
+
+    .order-form__list-delivery {
+        flex-direction: row;
+        gap: 24px 24px;
+    }
+
+    .order-form__control-label-kern {
+        letter-spacing: 0;
+    }
+
+    .order-form__list-yours {
+        height: auto;
+        flex-direction: row;
+        flex-wrap: wrap-reverse;
+        gap: 31px 24px;
+    }
+
+    .order-form__item {
+        width: 130px;
+        height: 24px;
+    }
+
+    .order-form__item-yours {
+        width: 300px;
+        &--name {
+            order: 5;
+        }
+        &--tel {
+            order: 3;
+        }
+        &--email {
+            order: 4;
+        }
+        &--address {
+            order: 2;
+        }
+        &--extra {
+            order: 1;
+        }
+    }
+
+    .order-form__item-yours--address {
+        width: 100%;
+        min-height: 87px;
+    }
+
+    .order-form__item-yours--address .order-form__label-input {
+        padding: 15px 12px 7px;
+        min-height: auto;
+    }
+
+    .order-form__item-yours--extra {
+        width: 100%;
+        min-height: 128px;
+        margin-bottom: 39px;
+    }
+
+    .order-form__item-yours--extra .order-form__label-input {
+        min-height: 107px;
+    }
+
+    .order-form__item-yours--extra .order-form__label-span {
+        font-size: 16px;
+        margin-left: 12px;
+        margin-top: 0;
+        margin-bottom: 3px;
+    }
+
+    .order-form__item-berries:nth-of-type(7),
+    .order-form__item-berries:nth-of-type(8) {
+        visibility: hidden;
+    }
+
+    .order-form__item-supply {
+        width: 240px;
+        height: 24px;
+    }
+
+    .order-form__item-supply:nth-of-type(2) {
+        order: 2;
+    }
+
+    .order-form__list-delivery .order-form__item {
+        width: 205px;
+        min-height: 66px;
+    }
+
+    .order-form__list-delivery .order-form__item:nth-of-type(2) {
+        width: 255px;
+    }
+
+    .order-form__control-label {
+        font-size: 18px;
+    }
+
+    .order-form__list-supply .order-form__control-label {
+        padding-left: 48px;
+    }
+
+    .order-form__item-supply:nth-of-type(3) .order-form__control-label {
+        padding-left: 36px;
+    }
+
+    .order-form__item-supply:nth-of-type(3) .order-form__control-mark {
+        top: -1px;
+    }
+
+    .order-form__control-delivery {
+        line-height: 22px;
+    }
+
+    .order-form__control-mark-delivery {
+        top: 22px;
+    }
+
+    .order-form__label {
+        min-width: 300px;
+    }
+
+    .order-form__button {
+        font-size: 28px;
+        width: auto;
+        padding: 22px 106px 23px 104px;
+        margin-left: 144px;
+    }
+}
+
+@media (min-width: $width-desktop) {
+    .order-form__container {
+        width: $width-desktop;
+        min-height: 640px;
+        margin: 0 auto;
+        background:
+            url("../../img/form-welcome-bg-desktop.jpg") center top / 1440px 200px no-repeat,
+            linear-gradient(to bottom, #aa506c 200px, $white-color 200px, $white-color 100%);
+        @media (min-resolution: 2dppx) {
+            background: url("../../img/form-welcome-bg-desktop@2x.jpg") center top / 1440px 200px no-repeat,
+            linear-gradient(to bottom, #aa506c 200px, $white-color 200px, $white-color 100%);
+        }
+    }
+
+    .order-form__welcome {
+        padding-bottom: 111px;
+        margin-bottom: 20px;
+        background: url("../../img/leaves.svg") center bottom 23px / 296px 42px no-repeat;
+    }
+
+    .order-form__text {
+        width: 532px;
+        line-height: 22px;
+        padding-left: 6px;
+        padding-right: 0;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .order-form__welcome-title-span {
+        margin-left: 0;
+    }
+
+   // ?form
+    .order-form__form {
+        width: 800px;
+        padding-top: 26px;
+        padding-left: 108px;
+        padding-right: 50px;
+        margin: 0 auto 182px;
+    }
+
+    .order-form__fieldset:not(:last-of-type) {
+        padding-left: 0; //46px
+        padding-right: 0; //46px
+    }
+
+    .order-form__title {
+        margin-bottom: 56px;
+    }
+
+    .order-form__list-berries {
+        height: 80px;
+    }
+
+    .order-form__item-berries:nth-of-type(7),
+    .order-form__item-berries:nth-of-type(8) {
+        visibility: visible;
+    }
+
+    .order-form__control-berries {
+        width: 100px;
+    }
+
+    .order-form__fieldset-supply {
+        margin-left: -1px;
+        margin-bottom: 53px;
+    }
+
+    .order-form__list-supply {
+        gap: 0;
+    }
+
+    .order-form__item-supply {
+        width: 175px;
+        margin-right: 30px;
+    }
+
+    .order-form__item-supply .order-form__control-label {
+        padding-left: 36px;
+    }
+
+    .order-form__item-supply:nth-of-type(2) {
+        width: 227px;
+        order: 0;
+    }
+
+    .order-form__item-supply .order-form__control-mark {
+        top: -2px;
+    }
+
+    .order-form__item-supply:nth-of-type(3) .order-form__control-mark {
+        top: -2px;
+    }
+
+    .order-form__fieldset-delivery {
+        margin-left: -1px;
+        padding-bottom: 0;
+        margin-bottom: 31px; 
+    }
+
+    .order-form__title-delivery {
+        margin-bottom: 54px;
+    }
+
+    .order-form__list-delivery {
+        gap: 24px 47px;
+    }
+    .order-form__list-delivery .order-form__item {
+        width: 252px;
+    }
+
+    .order-form__list-delivery .order-form__item:nth-of-type(2) {
+        width: 355px;
+    }
+
+    .order-form__control-mark-delivery {
+        top: 11px;
+    }
+
+    .order-form__delivery-brake {
+        display: none;
+    }
+
+    .order-form__fieldset-yours {
+        width: 624px;
+        margin-left: 1px;
+        margin-bottom: 48px;
+    }
+
+    .order-form__title-yours {
+        margin-bottom: 49px;
+        text-align: left;
+    }
+
+
+    .order-form__button {
+        margin-left: 200px;
+    }
+
+
+}

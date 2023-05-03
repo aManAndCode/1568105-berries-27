@@ -1,0 +1,25 @@
+.page__body {
+   font-family: "Raleway", "Montserrat", sans-serif;
+   font-style: normal;
+   font-weight: 400;
+   font-size: 16px;
+   line-height: 20px;
+   color: #000000;
+   background-color: $white-color;
+}
+
+.page__container {
+   margin: 0 auto;
+}
+
+@media (min-width: $width-tablet) {
+   .page__container {
+      min-width: $width-tablet;
+   }
+}
+
+@media (min-width: $width-desktop) {
+   .page__container {
+      // width: $width-desktop;
+   }
+}

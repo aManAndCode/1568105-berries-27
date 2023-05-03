@@ -1,0 +1,23 @@
+/* здесь используйте глобальные переменные */
+//* viewports
+$width-mobile: 320px;
+$width-tablet: 768px;
+$width-desktop: 1440px;
+
+//* colors
+$white-color: #fbfcfe;
+$blue-gray: #f1f6fc;
+$leaf-gray: rgba($color: #8e9892b2, $alpha: 0.7);
+$green: #0f805d;
+$green-hover: #7bdb0a;
+$green-active: rgba($color: #0f805d, $alpha: 0.5);
+$purple: #6a107a;
+$purple-hover: #b22ec8;
+$purple-active: rgba($color: #6a107a, $alpha: 0.6);
+$error-color: #ff8282;
+
+
+//* titles
+$title-mobile: 36px;
+$title-tablet: 48px;
+$title-desktop: 52px;
